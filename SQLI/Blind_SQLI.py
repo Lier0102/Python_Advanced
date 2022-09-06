@@ -7,7 +7,7 @@ class Solver:
     # initialization
     def __init__(self, port: str) -> None:
         self._chall_url = f"http://host3.dreamhack.games:{port}"
-        self._login_url = urljoin(self._chall_url, "login")
+        self._login_url = urljoin(self._chall_url, "login") # http://host3.dreamhack.games:{port}/login 으로 됨.
     # base HTTP methods
     def _login(self, userid: str, userpassword: str) -> bool:
         login_data = {
